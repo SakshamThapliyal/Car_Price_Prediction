@@ -72,11 +72,7 @@ if predict:
 
     try:
         prediction = model.predict(input_data)[0]
-        st.success(f"Predicted Car Price: ₹{int(prediction):,}")
+        st.success(f"Predicted Car Price: ${int(prediction):,}")
     except Exception as e:
         st.error(f"Prediction error: {e}")
 
-st.markdown("""
----
-Model predictions depend on representative training data and accurate preprocessing pipeline.
-""")
